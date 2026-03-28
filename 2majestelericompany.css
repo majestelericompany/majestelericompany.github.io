@@ -1,0 +1,79 @@
+/* GENEL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  /* ARKA PLAN (SABİT) */
+  background: url("arkaplan.jpg.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* KOYU FİLTRE */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 280px;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+    url("companybanner.jpg") center/cover;
+
+  position: relative;
+}
+
+/* PROFİL + YAZI (SOL ORTA) */
+.profile-area {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+}
+
+/* PROFİL RESMİ */
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  border: 4px solid gold;
+
+  background: url("company.jpg.jpeg") center/cover;
+
+  box-shadow: 0 0 30px gold;
+}
+
+/* YAZI */
+.title {
+  font-size: 32px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+/* İÇERİK */
+.content {
+  padding: 30px;
+}
+
+/* KART */
+.post {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
